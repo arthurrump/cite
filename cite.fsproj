@@ -5,7 +5,7 @@
     <PackAsTool>true</PackAsTool>
   </PropertyGroup>
   <PropertyGroup Label="PackageInfo">
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Automatic generation of BibTex references based on descriptive PDF filenames</Description>
     <Authors>Arthur Rump</Authors>
     <Copyright>Copyright (c) 2020, Arthur Rump</Copyright>
