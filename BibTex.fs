@@ -141,13 +141,15 @@ module Render =
         if names |> List.isEmpty then 
             id 
         else 
-            names 
-            |> List.map render 
-            |> List.reduce (fun a b -> a >> render " and " >> b)
+            let renderNames =
+                names 
+                |> List.map render 
+                |> List.reduce (fun a b -> a >> render " and " >> b)
+            render "{" >> renderNames >> render "}"
 
     let renderEntry entry =
         render "@" >> renderEntryType entry.EntryType >> render "{" >> render entry.Citekey >> render "," >> newline
-        >> renderOptionalField "_cite_filename" entry.CiteFilename
+        >> renderOptionalField "cite_filename" entry.CiteFilename
         >> renderOptionalField "title" entry.Title
         >> renderCond (notEmpty entry.Author) 
             (renderFieldDecl "author" >> renderPersonList entry.Author >> render "," >> newline)
