@@ -2,6 +2,17 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+  <PropertyGroup Label="PackageInfo">
+    <Version>1.0.0</Version>
+    <Description>Automatic generation of BibTex references based on descriptive PDF filenames</Description>
+    <Authors>Arthur Rump</Authors>
+    <Copyright>Copyright (c) 2020, Arthur Rump</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/arthurrump/cite</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/arthurrump/cite</PackageProjectUrl>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Crossref.fs" />
