@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Crossref.fs" />
+    <Compile Include="BibTex.fs" />
+    <Compile Include="Convert.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Argu" Version="6.0.0" />
+    <PackageReference Include="FParsec" Version="1.1.1" />
+    <PackageReference Include="Thoth.Json.Net" Version="4.0.0" />
+  </ItemGroup>
+</Project>
